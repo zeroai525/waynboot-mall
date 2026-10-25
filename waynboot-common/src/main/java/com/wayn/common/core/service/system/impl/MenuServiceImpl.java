@@ -2,7 +2,7 @@ package com.wayn.common.core.service.system.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.common.core.entity.system.Menu;
 import com.wayn.common.core.entity.system.RoleMenu;
 import com.wayn.common.core.mapper.system.MenuMapper;

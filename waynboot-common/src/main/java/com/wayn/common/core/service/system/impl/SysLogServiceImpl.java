@@ -1,6 +1,6 @@
 package com.wayn.common.core.service.system.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.common.core.entity.system.SysLog;
 import com.wayn.common.core.mapper.system.SysLogMapper;
 import com.wayn.common.core.service.system.ISysLogService;

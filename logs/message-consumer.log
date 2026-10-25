@@ -1,0 +1,25 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-25 12:18:32.645 [] [main] [INFO ] com.wayn.MessageApplication:42 logStarting - Starting MessageApplication using Java 21.0.12 with PID 16828 (E:\ai\mychange\waynboot-mall\jars\waynboot-message-consumer.jar started by 13153 in E:\ai\mychange\waynboot-mall)
+2026-10-25 12:18:32.651 [] [main] [INFO ] com.wayn.MessageApplication:646 logStartupProfileInfo - The following 1 profile is active: "dev"
+2026-10-25 12:18:33.475 [] [main] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate:291 multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 12:18:33.479 [] [main] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate:145 registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-25 12:18:33.513 [] [main] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate:213 registerRepositoriesIn - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2026-10-25 12:18:34.436 [] [main] [INFO ] o.s.boot.tomcat.TomcatWebServer:102 initialize - Tomcat initialized with port 85 (http)
+2026-10-25 12:18:34.463 [] [main] [INFO ] o.a.coyote.http11.Http11NioProtocol:168 log - Initializing ProtocolHandler ["http-nio-85"]
+2026-10-25 12:18:34.468 [] [main] [INFO ] o.a.catalina.core.StandardService:168 log - Starting service [Tomcat]
+2026-10-25 12:18:34.469 [] [main] [INFO ] o.a.catalina.core.StandardEngine:168 log - Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-25 12:18:34.521 [] [main] [INFO ] o.s.b.w.c.s.WebApplicationContextInitializer:65 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1800 ms
+2026-10-25 12:18:36.629 [] [main] [INFO ] o.a.coyote.http11.Http11NioProtocol:168 log - Starting ProtocolHandler ["http-nio-85"]
+2026-10-25 12:18:36.641 [] [main] [INFO ] o.s.boot.tomcat.TomcatWebServer:228 start - Tomcat started on port 85 (http) with context path '/'
+2026-10-25 12:18:36.644 [] [main] [INFO ] o.s.a.r.c.CachingConnectionFactory:668 connectAddresses - Attempting to connect to: [127.0.0.1:5672]
+2026-10-25 12:18:36.695 [] [main] [INFO ] o.s.a.r.c.CachingConnectionFactory:609 createBareConnection - Created new connection: rabbitConnectionFactory#ff21443:0/SimpleConnection@3df3410a [delegate=amqp://guest@127.0.0.1:5672/, localPort=14526]
+2026-10-25 12:18:36.818 [] [main] [INFO ] com.wayn.MessageApplication:48 logStarted - Started MessageApplication in 4.854 seconds (process running for 5.552)

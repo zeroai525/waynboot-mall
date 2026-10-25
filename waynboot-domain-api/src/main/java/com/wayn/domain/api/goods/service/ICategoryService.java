@@ -1,7 +1,7 @@
 package com.wayn.domain.api.goods.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.spring.service.IService;
 import com.wayn.domain.api.goods.entity.Category;
 import com.wayn.domain.api.goods.entity.Goods;
 import com.wayn.domain.api.goods.response.VanTreeSelectVO;

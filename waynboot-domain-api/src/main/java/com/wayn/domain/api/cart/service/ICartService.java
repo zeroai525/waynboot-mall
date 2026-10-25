@@ -1,7 +1,7 @@
 package com.wayn.domain.api.cart.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.spring.service.IService;
 import com.wayn.domain.api.cart.entity.Cart;
 import com.wayn.domain.api.cart.response.CartResponseVO;
 import com.wayn.domain.api.cart.response.CheckedGoodsResVO;

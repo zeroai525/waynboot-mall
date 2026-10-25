@@ -1,6 +1,6 @@
 package com.wayn.domain.goods.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.goods.entity.SearchHistory;
 import com.wayn.domain.api.goods.mapper.SearchHistoryMapper;
 import com.wayn.domain.api.goods.service.ISearchHistoryService;

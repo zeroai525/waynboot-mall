@@ -1,5 +1,6 @@
 package com.wayn.mobile.framework.security;
 
+import cn.dev33.satoken.json.SaJsonType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wayn.domain.api.trade.entity.Member;
 import lombok.Getter;
@@ -13,9 +14,12 @@ import java.util.Set;
  * 移动端登录用户快照。
  * <p>
  * Sa-Token 只负责 token 与 session 生命周期，本类用于保存业务侧需要的会员信息和权限快照。
+ * <p>
+ * 实现 {@link SaJsonType}：Sa-Token 1.46 起对 Redis 中的 Session 启用 JSON 多态反序列化白名单，
+ * 未登记的业务类型会抛「请先将其注册到 JSON 全局类型白名单」。
  */
 @Getter
-public class LoginUserDetail implements Serializable {
+public class LoginUserDetail implements Serializable, SaJsonType {
 
 
     @Serial

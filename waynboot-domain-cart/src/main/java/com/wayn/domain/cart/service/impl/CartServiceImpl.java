@@ -1,7 +1,7 @@
 package com.wayn.domain.cart.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.cart.entity.Cart;
 import com.wayn.domain.api.cart.mapper.CartMapper;
 import com.wayn.domain.api.cart.service.ICartService;

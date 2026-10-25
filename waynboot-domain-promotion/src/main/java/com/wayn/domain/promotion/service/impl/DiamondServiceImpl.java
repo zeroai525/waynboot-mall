@@ -2,7 +2,7 @@ package com.wayn.domain.promotion.service.impl;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.promotion.entity.Diamond;
 import com.wayn.domain.api.promotion.mapper.DiamondMapper;
 import com.wayn.domain.api.promotion.service.IDiamondService;

@@ -37,7 +37,7 @@
         </dependency>
         <dependency>
             <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot3-starter</artifactId>
+            <artifactId>sa-token-spring-boot4-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.dev33</groupId>
@@ -93,6 +93,12 @@
         <dependency>
             <groupId>com.wayn</groupId>
             <artifactId>waynboot-domain-trade</artifactId>
+        </dependency>
+
+        <!-- AI Agent 通用能力（不依赖业务模块，可复用于其他项目） -->
+        <dependency>
+            <groupId>com.wayn</groupId>
+            <artifactId>waynboot-ai-starter</artifactId>
         </dependency>
 
         <!-- 验证码 -->

@@ -1,7 +1,7 @@
 package com.wayn.domain.api.goods.service;
 
 
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.spring.service.IService;
 import com.wayn.domain.api.goods.entity.SearchHistory;
 
 import java.util.List;

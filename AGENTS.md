@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## 项目结构与模块划分
-本仓库是基于 Spring Boot 3、Java 17 的 Maven 多模块商城后端。`waynboot-admin-api` 提供后台管理接口（同时承载 Spring `@Scheduled` 治理定时任务），`waynboot-mobile-api` 提供 H5/移动端接口，`waynboot-message` 负责 RabbitMQ 相关能力，`waynboot-data` 封装 Redis / Elasticsearch，`waynboot-util` 放枚举、异常、常量和轻量工具。`waynboot-domain-api` 收敛跨领域契约，`waynboot-domain-trade`、`waynboot-domain-inventory`、`waynboot-domain-goods`、`waynboot-domain-cart`、`waynboot-domain-promotion` 分别承载订单、库存、商品、购物车和营销实现，`waynboot-payment-channel` 承载微信、支付宝、易支付的支付 / 退款渠道适配。`waynboot-common` 只保留通用配置、切面、策略接口、通用模型和基础设施。部署和中间件脚本在 `db-init`、`mysql`、`redis`、`rabbitmq`、`es`、`nginx`、`docker-compose*.yml`。
+本仓库是基于 Spring Boot 4.1.2、Java 21 的 Maven 多模块商城后端。`waynboot-admin-api` 提供后台管理接口（同时承载 Spring `@Scheduled` 治理定时任务），`waynboot-mobile-api` 提供 H5/移动端接口，`waynboot-ai-starter` 提供 AI Agent 通用能力（自动装配 / 外置 Prompt / SSE 通道，默认关闭），`waynboot-message` 负责 RabbitMQ 相关能力，`waynboot-data` 封装 Redis / Elasticsearch，`waynboot-util` 放枚举、异常、常量和轻量工具。`waynboot-domain-api` 收敛跨领域契约，`waynboot-domain-trade`、`waynboot-domain-inventory`、`waynboot-domain-goods`、`waynboot-domain-cart`、`waynboot-domain-promotion` 分别承载订单、库存、商品、购物车和营销实现，`waynboot-payment-channel` 承载微信、支付宝、易支付的支付 / 退款渠道适配。`waynboot-common` 只保留通用配置、切面、策略接口、通用模型和基础设施。部署和中间件脚本在 `db-init`、`mysql`、`redis`、`rabbitmq`、`es`、`nginx`、`docker-compose*.yml`。
 
 ## 构建、测试与本地运行
 在仓库根目录执行：

@@ -2,7 +2,7 @@ package com.wayn.domain.api.goods.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.spring.service.IService;
 import com.wayn.domain.api.goods.entity.Keyword;
 
 /**

@@ -1,7 +1,7 @@
 package com.wayn.domain.trade.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.trade.entity.OrderActivityRelation;
 import com.wayn.domain.api.trade.enums.OrderActivityInventoryStatusEnum;
 import com.wayn.domain.api.trade.enums.OrderActivityTypeEnum;

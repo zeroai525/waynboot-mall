@@ -1,6 +1,6 @@
 package com.wayn.domain.promotion.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.promotion.entity.SeckillSku;
 import com.wayn.domain.api.promotion.mapper.SeckillSkuMapper;
 import com.wayn.domain.api.promotion.service.ISeckillSkuService;

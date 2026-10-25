@@ -2,7 +2,7 @@ package com.wayn.domain.api.promotion.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.spring.service.IService;
 import com.wayn.domain.api.promotion.entity.ShopCoupon;
 import com.wayn.domain.api.promotion.request.CouponReceiveReqVO;
 import com.wayn.domain.api.promotion.request.ShopCouponGiveUserReqVO;

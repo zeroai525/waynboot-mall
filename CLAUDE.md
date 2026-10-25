@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目简介
 
-waynboot-mall 是一个 Spring Boot 3.5.14 / JDK 17 的开源 H5 商城后端，包含管理端 API、移动端 API、消息消费服务三个可独立部署的应用。后台管理端保留 Spring Security + JWT，移动端已切换为 Sa-Token。
+waynboot-mall 是一个 Spring Boot 4.1.2 / JDK 21 的开源 H5 商城后端（AI 能力基于 Spring AI 2.0.2），包含管理端 API、移动端 API、消息消费服务三个可独立部署的应用。后台管理端保留 Spring Security + JWT，移动端已切换为 Sa-Token。
 
 ## 常用命令
 

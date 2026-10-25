@@ -1,7 +1,7 @@
 package com.wayn.domain.goods.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.goods.entity.GoodsSpecification;
 import com.wayn.domain.api.goods.mapper.GoodsSpecificationMapper;
 import com.wayn.domain.api.goods.service.IGoodsSpecificationService;

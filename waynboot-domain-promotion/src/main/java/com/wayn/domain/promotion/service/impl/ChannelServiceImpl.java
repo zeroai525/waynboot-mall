@@ -1,7 +1,7 @@
 package com.wayn.domain.promotion.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.promotion.entity.Channel;
 import com.wayn.domain.api.promotion.mapper.ChannelMapper;
 import com.wayn.domain.api.promotion.service.IChannelService;

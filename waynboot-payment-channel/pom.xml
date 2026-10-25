@@ -22,6 +22,12 @@
             <artifactId>waynboot-common</artifactId>
         </dependency>
 
+        <!-- 退款重试注解。Boot 4 的 BOM 不再管理 spring-retry，需显式引入（版本由根 pom 统一管理） -->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+
         <!-- 微信支付 -->
         <dependency>
             <groupId>com.github.binarywang</groupId>

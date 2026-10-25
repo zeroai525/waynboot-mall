@@ -227,7 +227,7 @@ SQL files are retained as database evolution entry points. Before applying them,
 
 ### Requirements
 
-- JDK 17
+- JDK 21 (`java.version=21`; artifacts target 21, so JDK 21+ is required at runtime)
 - Maven 3.8+
 - MySQL 8+
 - Redis 6+

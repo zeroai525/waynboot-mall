@@ -22,5 +22,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 测试用 ApplicationContextRunner 装配 RestClientAutoConfiguration。
+             Boot 4 把它从 spring-boot-autoconfigure 拆到了独立模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-restclient</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>

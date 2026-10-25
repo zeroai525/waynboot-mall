@@ -63,4 +63,21 @@ wayn:
   freightLimit: "0"  # 运费限额
   freightPrice: "0"  # 运费
   unpaidOrderCancelDelayTime: 1 # 未支付订单超时时间
+  # AI Agent 能力（enabled=false 时不加载任何 AI Bean，行为与接入前一致）
+  ai:
+    enabled: ${AI_ENABLED:false}
+    provider: openai
+    base-url: ${LLM_BASE_URL:https://api.deepseek.com}
+    api-key: ${LLM_API_KEY:}
+    model: ${LLM_MODEL:deepseek-chat}
+    temperature: 0.3
+    max-tokens: 1024
+    system-prompt: prompts/guide-system.st
+    chat-path: /ai/chat
+    sse-timeout-ms: 120000      # 显式设置，避免容器默认 30s 截断长回答
+    max-steps: 6
+    max-tool-calls-per-turn: 6
+    max-history-turns: 8
+    tool-timeout-ms: 3000
+    degrade-on-error: true
 

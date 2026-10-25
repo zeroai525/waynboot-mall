@@ -1,19 +1,20 @@
 # waynboot-mall
 
-`waynboot-mall` 是一个基于 Spring Boot 3、Java 17 的 Maven 多模块商城后端项目，覆盖移动端商城、后台管理、消息消费、定时任务、Redis 和 Elasticsearch 等能力。项目当前重点围绕商品、订单、库存、支付、MQ、本地消息补偿和对账治理进行拆分，目标是让交易链路在高并发场景下更易维护、更可扩展。
+`waynboot-mall` 是一个基于 Spring Boot 4、Java 21 的 Maven 多模块商城后端项目，覆盖移动端商城、后台管理、消息消费、定时任务、Redis 和 Elasticsearch 等能力。项目当前重点围绕商品、订单、库存、支付、MQ、本地消息补偿和对账治理进行拆分，目标是让交易链路在高并发场景下更易维护、更可扩展。
 
 ## 技术栈
 
 | 分类 | 技术 |
 | --- | --- |
-| 基础框架 | Spring Boot 3.1.4、Java 17 |
-| Web 与安全 | Spring MVC、后台 Spring Security + JWT、移动端 Sa-Token |
-| 数据访问 | MyBatis-Plus、MySQL、Druid |
-| 缓存 | Redis、Lettuce、Lua 脚本 |
+| 基础框架 | Spring Boot 4.1.2、Java 21 |
+| Web 与安全 | Spring MVC、后台 Spring Security 7 + JWT、移动端 Sa-Token 1.46 |
+| 数据访问 | MyBatis-Plus 3.5.17、MySQL、Druid |
+| 缓存 | Redis、Lettuce 7、Lua 脚本 |
 | 搜索 | Elasticsearch 7 |
 | 消息 | RabbitMQ、延迟消息、本地消息表 |
 | 定时任务 | Spring Scheduled |
 | 支付 | 微信支付、支付宝、易支付 |
+| AI 能力 | Spring AI 2.0.2（`waynboot-ai-starter`，默认关闭，见 `docs/AI-Agent接入实战方案.md`） |
 | 测试 | JUnit 5、Mockito、Spring Boot Test |
 
 ## 模块结构
@@ -22,6 +23,7 @@
 waynboot-mall
 ├── waynboot-admin-api              后台管理接口
 ├── waynboot-mobile-api             H5 / 移动端接口
+├── waynboot-ai-starter             AI Agent 通用能力（自动装配 / 外置 Prompt / SSE 通道）
 ├── waynboot-common                 通用配置、切面、策略接口、通用模型和基础设施
 ├── waynboot-domain-api             跨领域契约：实体、Mapper、Service 接口、VO、枚举
 ├── waynboot-domain-trade           订单、支付编排、状态机、本地消息、对账
@@ -248,7 +250,7 @@ SQL 文件保留为数据库结构演进入口，提交前需要结合目标环�
 
 ### 环境要求
 
-- JDK 17
+- JDK 21（`java.version=21`，产物 target 为 21，运行时必须 JDK 21+）
 - Maven 3.8+
 - MySQL 8+
 - Redis 6+
@@ -277,6 +279,30 @@ mvn -pl waynboot-message/waynboot-message-consumer spring-boot:run
 ```
 
 也可以用 IDE 分别启动对应模块的 `*Application`。
+
+### 商品图片素材（首次启动必做）
+
+商品图、分类图标、banner、商品详情长图都走 `/upload/**` 静态映射，指向
+`wayn.uploadDir`（默认 `E:\waynshop\webp`，可用环境变量 `UPLOAD_DIR` 覆盖）。
+**这些图片不在仓库里**（原始素材在作者私有 OSS，未开源），所以新环境启动后前端
+所有图片都会报 `NoResourceFoundException: No static resource xxx.webp`。
+
+首次启动前生成占位图即可，脚本会从数据库读出所有被引用的文件名，按用途生成
+尺寸、配色合适的 webp，并把商品名画在图上：
+
+```bash
+python scripts/dev/gen-placeholder-images.py            # 生成到默认目录
+python scripts/dev/gen-placeholder-images.py --out D:/waynshop/webp --jobs 8
+python scripts/dev/gen-placeholder-images.py --dry-run  # 只看统计
+```
+
+约 8700 张、110 MB，多进程下一两分钟；`--force` 可重建。脚本依赖 Pillow（需 webp
+支持）与 numpy，数据库连接参数可用 `WAYN_DB_*` 环境变量覆盖。
+
+![占位图效果](docs/images/upload-placeholder-preview.png)
+
+上排为商品主图与详情图，下排为 banner、分类金刚位、头像；文字取自数据库中的商品名/分类名，
+配色按文件名 hash 生成，保证同一商品每次重建都一致。
 
 ### 中间件
 
@@ -336,6 +362,8 @@ waynboot-domain-inventory/src/main/java/com/wayn/domain/inventory/service
 - 管理后台前端：`waynboot-admin`
 
 后端项目只提供 API 和治理能力，前端启动和部署请参考对应前端仓库。
+
+> **启动后端不需要安装前端。** 本仓库 `src/main/resources` 下没有 `static/`，也不打包任何前端产物，后端不托管页面 —— 用 `curl` / Postman 即可完成接口验收。只有需要在浏览器里点界面时，才 clone 上面两个前端仓库并把接口地址指向 81（后台）/ 82（H5）。
 
 ## 许可
 

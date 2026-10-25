@@ -1,6 +1,6 @@
 package com.wayn.domain.trade.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.domain.api.trade.entity.OrderGoods;
 import com.wayn.domain.api.trade.mapper.OrderGoodsMapper;
 import com.wayn.domain.api.trade.service.IOrderGoodsService;

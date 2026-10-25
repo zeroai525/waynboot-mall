@@ -1,6 +1,6 @@
 package com.wayn.common.core.service.tool.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.wayn.common.core.entity.tool.EmailConfig;
 import com.wayn.common.core.mapper.tool.MailConfigMapper;
 import com.wayn.common.core.service.tool.IMailConfigService;
